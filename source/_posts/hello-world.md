@@ -1,6 +1,12 @@
 ---
 title: Hello World
 abbrlink: 4a17b156
+date: 2025-02-23 12:42:38
+tags:
+  - 教程
+  - Hexo
+categories:
+  - 技术笔记
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 

@@ -120,6 +120,7 @@ githubEmojis:
   customEmojis:
 
 # live2d模型
+# live2d模型
 live2d:
   enable: true
   scriptFrom: local
@@ -127,17 +128,24 @@ live2d:
   pluginJsPath: lib/
   pluginModelPath: assets/
   tagMode: false
-  log: false
+  debug: false
   model:
-    use: live2d-widget-model-z16
+    use: live2d-widget-model-koharu  # 更换为支持声音的模型
   display:
     position: right
-    width: 200
-    height: 400
+    width: 150
+    height: 300
+    hOffset: 0
+    vOffset: -20
   mobile:
     show: true
+    scale: 0.5
   react:
-    opacity: 1.0
+    opacity: 0.7
+    opacityOnHover: 0.2
+  dialog:
+    enable: true
+    hitokoto: true  # 启用一言API
 
 
 # Deployment
