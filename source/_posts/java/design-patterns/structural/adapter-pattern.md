@@ -232,6 +232,5 @@ public class InputStreamExample {
 ---
 
 希望这篇文章能帮助您更好地理解Java中的适配器模式。如果您有任何问题，欢迎在评论区讨论！ 
-abbrlink: '0'
 ---
  
