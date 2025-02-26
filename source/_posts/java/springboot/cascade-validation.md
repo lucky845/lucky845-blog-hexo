@@ -7,7 +7,7 @@ tags:
   - 级联校验
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa573
 date: 2025-02-25 04:00:00
 ---

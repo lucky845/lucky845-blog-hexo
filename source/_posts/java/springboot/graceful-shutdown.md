@@ -7,7 +7,7 @@ tags:
   - 优雅停机
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa579
 date: 2025-02-25 10:00:00
 ---

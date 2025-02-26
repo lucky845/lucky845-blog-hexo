@@ -7,7 +7,7 @@ tags:
   - 依赖管理
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa565
 date: 2025-02-24 20:00:00
 ---

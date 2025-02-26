@@ -7,7 +7,7 @@ tags:
   - 启动失败
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa578
 date: 2025-02-25 09:00:00
 ---

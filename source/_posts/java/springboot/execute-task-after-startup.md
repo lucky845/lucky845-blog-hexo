@@ -7,7 +7,7 @@ tags:
   - 生命周期
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa574
 date: 2025-02-25 05:00:00
 ---

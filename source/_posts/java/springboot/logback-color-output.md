@@ -7,7 +7,7 @@ tags:
   - 日志配置
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa581
 date: 2025-02-25 12:00:00
 ---

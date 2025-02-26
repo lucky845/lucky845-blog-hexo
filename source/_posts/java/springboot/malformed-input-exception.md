@@ -7,7 +7,7 @@ tags:
   - 异常处理
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa580
 date: 2025-02-25 11:00:00
 ---

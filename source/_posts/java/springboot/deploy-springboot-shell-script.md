@@ -7,7 +7,7 @@ tags:
   - 部署
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa582
 date: 2025-02-25 13:00:00
 ---

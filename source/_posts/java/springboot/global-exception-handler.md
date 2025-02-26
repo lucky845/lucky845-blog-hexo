@@ -7,7 +7,7 @@ tags:
   - 全局处理
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa568
 date: 2025-02-24 23:00:00
 ---

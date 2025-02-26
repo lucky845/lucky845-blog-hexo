@@ -7,7 +7,7 @@ tags:
   - 属性安全
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa577
 date: 2025-02-25 08:00:00
 ---

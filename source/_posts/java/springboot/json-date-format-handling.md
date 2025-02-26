@@ -1,13 +1,13 @@
 ---
-title: 【Spring】统一处理Web请求的JSON日期格式
+title: 【Spring Boot】统一处理Web请求的JSON日期格式
 tags:
   - Java
-  - Spring
+  - Spring Boot
   - JSON
   - 日期格式
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa55d
 date: 2025-02-24 14:30:00
 ---

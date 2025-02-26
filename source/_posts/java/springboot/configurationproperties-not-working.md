@@ -7,7 +7,7 @@ tags:
   - 配置管理
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa567
 date: 2025-02-24 22:00:00
 ---

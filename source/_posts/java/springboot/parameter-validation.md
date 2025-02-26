@@ -7,7 +7,7 @@ tags:
   - 数据验证
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa572
 date: 2025-02-25 03:00:00
 ---

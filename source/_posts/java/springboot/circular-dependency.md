@@ -7,7 +7,7 @@ tags:
   - 循环依赖
 categories:
   - Java
-  - Spring
+  - Spring Boot
 abbrlink: b55fa575
 date: 2025-02-25 06:00:00
 ---
