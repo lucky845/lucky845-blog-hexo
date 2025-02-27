@@ -5,8 +5,8 @@
 # Site
 title: lucky845的博客
 subtitle: 'lucky845的博客'
-description: ''
-keywords: Java, Python, Linux, 程序员， 代码， 编程， 开发， 开发者， 技术， 技术， 程序，人生， 生活
+description: '一个专注于Java、Spring Boot、Python、Linux等技术栈的全栈开发博客，分享学习经验和技术见解。'
+keywords: Java, Spring Boot, Spring Cloud, Python, Django, Linux, DevOps, 后端开发, 全栈开发, Web开发, 微服务, 云原生, 数据库, MySQL, Redis, 分布式系统, 程序员, 技术博客, 编程学习, 开发经验
 author: lucky845
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -120,7 +120,6 @@ githubEmojis:
   customEmojis:
 
 # live2d模型
-# live2d模型
 live2d:
   enable: true
   scriptFrom: local
@@ -130,7 +129,7 @@ live2d:
   tagMode: false
   debug: false
   model:
-    use: live2d-widget-model-koharu  # 更换为支持声音的模型
+    use: live2d-widget-model-koharu
   display:
     position: right
     width: 150
