@@ -153,3 +153,13 @@ deploy:
   type: git
   repository: https://github.com/lucky845/lucky845.github.io
   branch: master
+
+# 谷歌、百度站点地图生成
+Plugins:
+- hexo-generator-baidu-sitemap
+- hexo-generator-sitemap
+
+baidusitemap:
+    path: baidusitemap.xml
+sitemap:
+    path: sitemap.xml
