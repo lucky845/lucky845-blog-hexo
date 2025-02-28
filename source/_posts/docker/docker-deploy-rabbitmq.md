@@ -357,3 +357,114 @@ public class DelayedPluginProducer {
         factory.setPort(5672);
         factory.setUsername("admin");
         factory.setPassword("admin123");
+        
+        try (Connection connection = factory.newConnection();
+             Channel channel = connection.createChannel()) {
+            
+            String message = "Hello, delayed message!";
+            
+            // 设置消息头，指定延迟时间（毫秒）
+            Map<String, Object> headers = new HashMap<>();
+            headers.put("x-delay", 10000); // 10秒延迟
+            
+            AMQP.BasicProperties props = new AMQP.BasicProperties.Builder()
+                .headers(headers)
+                .build();
+            
+            // 发送消息到延时交换机
+            channel.basicPublish("delayed_exchange", "delayed_routing_key", props, message.getBytes());
+            System.out.println("Sent message: '" + message + "', will be delivered in 10 seconds");
+        }
+    }
+}
+```
+
+#### 消费者代码
+
+```java
+import com.rabbitmq.client.*;
+
+public class DelayedPluginConsumer {
+    public static void main(String[] args) throws Exception {
+        ConnectionFactory factory = new ConnectionFactory();
+        factory.setHost("localhost");
+        factory.setPort(5672);
+        factory.setUsername("admin");
+        factory.setPassword("admin123");
+        
+        Connection connection = factory.newConnection();
+        Channel channel = connection.createChannel();
+        
+        // 消费延时队列中的消息
+        channel.basicConsume("delayed_queue", true, (consumerTag, delivery) -> {
+            String message = new String(delivery.getBody(), "UTF-8");
+            System.out.println("Received delayed message: '" + message + "'");
+        }, consumerTag -> {});
+        
+        System.out.println("Waiting for delayed messages...");
+    }
+}
+```
+
+## 7. 延时队列应用场景
+
+延时队列在实际业务中有很多应用场景，例如：
+
+1. **订单超时取消**：用户下单后，如果在指定时间内未支付，系统自动取消订单
+2. **定时任务调度**：定时执行某些任务，如定时发送邮件、短信等
+3. **消息重试机制**：消息消费失败后，延迟一段时间再次投递
+4. **限时优惠活动**：优惠券到期提醒、活动结束通知等
+5. **预约系统**：提前预约后，到指定时间自动通知用户
+
+## 8. 常见问题与解决方案
+
+### 8.1 消息堆积问题
+
+当生产速度大于消费速度时，可能导致消息堆积：
+
+- 增加消费者数量
+- 优化消费者处理逻辑
+- 增加硬件资源
+- 使用集群模式分担负载
+
+### 8.2 插件安装失败
+
+如果插件安装失败，可以尝试：
+
+```bash
+# 查看可用插件列表
+docker exec -it rabbitmq rabbitmq-plugins list
+
+# 确保容器有足够权限
+docker exec -it --user root rabbitmq bash
+
+# 手动下载插件并放入插件目录
+cd /plugins
+wget https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/releases/download/v3.12.0/rabbitmq_delayed_message_exchange-3.12.0.ez
+```
+
+### 8.3 集群节点同步问题
+
+集群节点之间可能出现同步问题：
+
+```bash
+# 检查集群状态
+docker exec -it rabbitmq1 rabbitmqctl cluster_status
+
+# 如果节点状态异常，可以尝试重新加入集群
+docker exec -it rabbitmq2 bash
+rabbitmqctl stop_app
+rabbitmqctl reset
+rabbitmqctl join_cluster rabbit@rabbitmq1
+rabbitmqctl start_app
+```
+
+## 9. 总结
+
+Docker 部署 RabbitMQ 极大地简化了环境配置和管理工作。通过本文介绍的方法，可以快速部署单节点或集群模式的 RabbitMQ 服务，并配置延时队列功能。延时队列作为 RabbitMQ 的重要功能扩展，在实际业务中有着广泛的应用场景。
+
+无论是使用死信队列方式还是插件方式实现延时队列，都能满足大多数业务场景的需求。在选择实现方式时，可以根据具体需求和系统架构进行选择。
+
+---
+
+希望这篇文章能帮助您更好地理解如何使用 Docker 部署 RabbitMQ 并配置延时队列。如果您有任何问题，欢迎在评论区讨论！
