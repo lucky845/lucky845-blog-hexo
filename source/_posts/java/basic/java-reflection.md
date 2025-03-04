@@ -8,7 +8,7 @@ categories:
   - 技术笔记
   - Java
   - Java基础
-abbrlink: 8f9e705f
+abbrlink: 8f9e708f
 ---
 
 ## 引言
