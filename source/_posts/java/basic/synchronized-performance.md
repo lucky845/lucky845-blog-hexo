@@ -5,7 +5,10 @@ tags:
   - Java
   - 并发编程
   - 性能优化
-categories: Java
+categories: 
+  - Java
+  - 技术笔记
+  - Java基础
 abbrlink: e55fb501
 ---
 

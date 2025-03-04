@@ -5,7 +5,10 @@ tags:
   - Java
   - 序列化
   - 性能优化
-categories: Java
+categories: 
+  - Java
+  - 技术笔记
+  - Java基础
 abbrlink: 8f9e706f
 ---
 
