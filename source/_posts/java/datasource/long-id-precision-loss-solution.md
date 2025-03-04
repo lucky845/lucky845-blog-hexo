@@ -4,7 +4,7 @@ categories:
   - 技术笔记
   - Java
   - Spring
-  - SpringBoot
+  - Spring Boot
 tags:
   - 雪花算法
   - 精度损失

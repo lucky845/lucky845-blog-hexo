@@ -5,7 +5,7 @@ tags:
   - Docker
   - Nacos
 categories:
-  - Docker部署指南
+  - Docker
 keywords: 'Docker,Nacos,部署,单机,集群'
 description: 本文详细介绍如何使用Docker部署Nacos的单机版和集群版，包括环境准备、配置说明、性能优化等内容。
 abbrlink: e55fa612

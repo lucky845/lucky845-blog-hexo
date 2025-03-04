@@ -6,7 +6,7 @@ tags:
   - Sentinel
   - Nacos
 categories:
-  - Java开发
+  - Java
 keywords: 'Java,Sentinel,Nacos,持久化,配置中心'
 description: 本文详细介绍如何在Java项目中实现Sentinel规则持久化到Nacos配置中心，包括环境准备、配置步骤、最佳实践等内容。
 abbrlink: d7a9c124

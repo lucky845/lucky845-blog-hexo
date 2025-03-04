@@ -7,7 +7,7 @@ tags:
   - Web
 categories:
   - Java
-  - Spring Boots
+  - Spring Boot
 abbrlink: b55fa566
 date: 2025-02-24 21:00:00
 ---
