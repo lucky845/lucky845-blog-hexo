@@ -9,7 +9,7 @@ categories:
   - Java
   - 技术笔记
   - Java基础
-abbrlink: 8f9e707f
+abbrlink: 8f9e712f
 ---
 
 # Java SPI 机制详解
