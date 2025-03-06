@@ -1,5 +1,5 @@
 ---
-title: ArrayList核心源码解析与扩容机制详解
+title: 【Java】ArrayList核心源码解析与扩容机制详解
 tags:
   - Java集合
   - 源码分析
