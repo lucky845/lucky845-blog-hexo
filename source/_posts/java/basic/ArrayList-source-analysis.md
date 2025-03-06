@@ -1,12 +1,13 @@
 ---
 title: ArrayList核心源码解析与扩容机制详解
-date: 2025-03-06 13:00:00
 tags:
   - Java集合
   - 源码分析
-categories: 
+categories:
   - Java
   - Java基础
+abbrlink: 66c41391
+date: 2025-03-06 13:00:00
 ---
 
 ## 一、底层数据结构

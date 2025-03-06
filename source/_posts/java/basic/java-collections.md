@@ -27,8 +27,37 @@ Java集合框架是一个用于表示和操作集合的统一架构，它实现�
 3. **算法（Algorithms）**：对集合进行操作的方法，如排序、搜索等
 
 ### 集合框架层次结构
+```java
+java.util.Collection[I]
+	java.util.List[I]
+		java.util.ArrayList[C]
+		java.util.LinkedList[C]
+		java.util.Vector[C]  //线程安全
+			java.util.Stack[C]  //线程安全
+			
+	java.util.Set[I]
+		java.util.HashSet[C]
+		java.util.SortedSet[I]
+			java.util.TreeSet[C]
+			
+	java.util.Queue[I]
+		java.util.Deque[I]
+		java.util.PriorityQueue[C]
+		
+java.util.Map[I]
+	java.util.SortedMap[I]
+		java.util.TreeMap[C]
+		
+	java.util.Hashtable[C]  //线程安全
+	java.util.HashMap[C]
+	java.util.LinkedHashMap[C]
+	java.util.WeakHashMap[C]
 
-![Java集合框架层次结构](https://s2.loli.net/2023/10/15/qJKGHxYXZjwWCcr.png)
+--
+[I]:接口
+[C]:类				
+```
+
 
 ## 核心接口详解
 
