@@ -8,3 +8,42 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Sitemap: https://lucky845.github.io/sitemap.xml
+
+User-agent: Yisouspider
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: Sogou inst spider
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /tbhx/hero
+
+User-agent: Facebot
+Allow: /tbhx/hero
+
+User-agent: Twitterbot
+Allow: /tbhx/hero
