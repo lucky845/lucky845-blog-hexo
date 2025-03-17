@@ -153,7 +153,7 @@ live2d:
 deploy:
   type: git
   repository: https://github.com/lucky845/lucky845.github.io
-  branch: master
+  branch: gh-pages
 
 # 谷歌、百度站点地图生成
 Plugins:
