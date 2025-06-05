@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: lucky845的博客
-subtitle: 'lucky845的博客'
-description: '一个专注于Java、Spring Boot、Python、Linux等技术栈的全栈开发博客，分享学习经验和技术见解。'
+title: lucky845的博客 | Java/Spring Boot/Python全栈技术分享
+subtitle: '专注Java、Spring Boot、Python全栈开发的技术博客。分享实战经验、源码解析及系统架构设计，助力开发者成长。'
+description: '专注Java、Spring Boot、Python全栈开发的技术博客。分享实战经验、源码解析及系统架构设计，助力开发者成长。'
 keywords: Java, Spring Boot, Spring Cloud, Python, Django, Linux, DevOps, 后端开发, 全栈开发, Web开发, 微服务, 云原生, 数据库, MySQL, Redis, 分布式系统, 程序员, 技术博客, 编程学习, 开发经验
 author: lucky845
 language: zh-CN
@@ -151,17 +151,27 @@ live2d:
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repository: https://github.com/lucky845/lucky845.github.io
-  branch: gh-pages
-  ignore_hidden: false
+  - type: git
+    repository: https://github.com/lucky845/lucky845.github.io
+    branch: gh-pages
+    ignore_hidden: false
+
+  - type: baidu_url_submitter  # 加入部署流程s
 
 # 谷歌、百度站点地图生成
 Plugins:
 - hexo-generator-baidu-sitemap
 - hexo-generator-sitemap
+- hexo-baidu-url-submit
 
 baidusitemap:
     path: baidusitemap.xml
 sitemap:
     path: sitemap.xml
+
+baidu_url_submit:
+  count: 10  # 每次提交最新10篇文章
+  host: blog.lucky845.top
+  token: AFEokxaQ1IhJWacZ
+  path: baidu_urls.txt  # 存储提交链接的文件
+

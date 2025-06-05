@@ -7,7 +7,10 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
+Sitemap: https://blog.lucky845.top/sitemap.xml
+Sitemap: https://blog.lucky845.top/baidusitemap.xml
 Sitemap: https://lucky845.github.io/sitemap.xml
+Sitemap: https://lucky845.github.io/baidusitemap.xml
 
 User-agent: Yisouspider
 Allow: /
