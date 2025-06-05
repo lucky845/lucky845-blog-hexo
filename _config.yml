@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: lucky845的博客 | Java/Spring Boot/Python全栈技术分享
-subtitle: '专注Java、Spring Boot、Python全栈开发的技术博客。分享实战经验、源码解析及系统架构设计，助力开发者成长。'
+title: lucky845的博客
+subtitle: 'Java/Spring Boot/Python全栈技术分享'
 description: '专注Java、Spring Boot、Python全栈开发的技术博客。分享实战经验、源码解析及系统架构设计，助力开发者成长。'
 keywords: Java, Spring Boot, Spring Cloud, Python, Django, Linux, DevOps, 后端开发, 全栈开发, Web开发, 微服务, 云原生, 数据库, MySQL, Redis, 分布式系统, 程序员, 技术博客, 编程学习, 开发经验
 author: lucky845
@@ -163,7 +163,8 @@ Plugins:
 - hexo-generator-baidu-sitemap
 - hexo-generator-sitemap
 - hexo-baidu-url-submit
-- hexo-seo
+# 代码压缩
+- hexo-neat
 
 baidusitemap:
     path: baidusitemap.xml
@@ -176,92 +177,20 @@ baidu_url_submit:
   token: AFEokxaQ1IhJWacZ
   path: baidu_urls.txt  # 存储提交链接的文件
 
-seo:
-  # minify html
-  html:
-    enable: true
-    # fix invalid html
-    fix: true
-    # exclude from minify
-    exclude:
-      - "*.min.{htm,html}"
-  # minify css
-  css:
-    enable: true
-    # If you want to customize the css minifier settings, you can put below
-    # exclude css from minifying, multiple supported
-    exclude:
-      - "**/*.min.css"
-  # minify js
-  js:
-    enable: true
-    # concatenate all js into one tag
-    ## WARNING: DO NOT USING ANOTHER MINIFIER PLUGIN
-    concat: false
-    # If you want to customize the js minifier settings, you can put below
-    # exclude css from minifying, multiple supported
-    exclude:
-      - "**/*.min.js"
-    # this is terser options, you can customize minifier with terser options
-    # https://github.com/terser/terser?tab=readme-ov-file#minify-options-structure
-    # below is config example
-    options:
-      compress:
-        dead_code: true
-      mangle:
-        toplevel: true
-        safari10: true
-  # rich snippets
-  schema:
-    # produce schema for page and post
-    article:
-      enable: true
-    # produce schema for breadcrumb
-    breadcrumb:
-      enable: true
-    # produce schema for sitelink
-    sitelink:
-      enable: true
-      searchUrl: https://www.webmanajemen.com/search?q={search_term_string}
-    # produce schema for homepage
-    homepage:
-      enable: true
-  # this function still under development because JAVASCRIPT HEAP MEMORY and my device is 8GB RAM
-  img:
-    enable: true
-    # fix broken images
-    broken: false
-    # default broken/missing images
-    # https://github.com/dimaslanjaka/hexo-seo/blob/f4cf27fbc7de2b831462d3b26cf70ece2499d15b/src/search/index.ts#L53
-    default: https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg
-    # broken images methods
-    # serverside : process broken images from server side (caused javascript heap out of memory, if your post large and your device has insufficient memory)
-    # clientside : process broken image from client side browser with webjs
-    onerror: serverside
-  # external links fix
-  links:
-    # enable or false
-    enable: true
-    # allowed following links, otherwise nofollow others
-    exclude:
-      - webmanajemen.com
-      - web-manajemen.blogspot.com
-  # seo-friendly sitemap
-  # you can fill value `sitemap: true` to create both sitemaps
-  sitemap:
-    # auto generate seo friendly sitemap on http://yoursite.com/sitemap.xml
-    # forked from yoast seo
-    # location: /sitemap.xml /page-sitemap.xml /post-sitemap.xml /category-sitemap.xml /tag-sitemap.xml
-    yoast: true
-    # google news sitemap
-    # location: /google-news-sitemap.xml
-    gnews: true
-  search:
-    # hexo seo-search page type to index
-    type: ['page', 'post']
-  feed:
-    # hexo seo-feed page type to index
-    type: [page, post]
-    # site icon for rss (PNG, JPEG, GIF)
-    icon: 'https://w7.pngwing.com/pngs/745/306/png-transparent-gallery-image-images-photo-picture-pictures-set-app-incredibles-icon-thumbnail.png'
-
+# 开启压缩
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:
+neat_css:
+  enable: true
+  exclude:
+    - '**/*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '**/*.min.js'
+    - '**/index.js'
